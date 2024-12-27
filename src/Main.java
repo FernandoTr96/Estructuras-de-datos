@@ -1,3 +1,4 @@
+import HashTables.GroupAnagrams;
 import HashTables.IsUnique;
 import HashTables.TwoSum;
 
@@ -10,6 +11,7 @@ public class Main {
         System.out.println("abcde is unique ? "+IsUnique.checkCharacters("abcde"));
         System.out.println("abcded is unique ? "+IsUnique.checkCharacters("abcded"));
         System.out.println("[9,2,5,6] indices de los pares que den 7: "+ Arrays.toString(TwoSum.check(new int[]{9, 2, 5, 6}, 7)));
+        System.out.println("anagramas: "+ new GroupAnagrams().group(new String[]{"saco","arresto","programa","rastreo","caso"}).toString());
     }
 }
 
