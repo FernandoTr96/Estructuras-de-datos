@@ -2,13 +2,15 @@ import HashTables.GroupAnagrams;
 import HashTables.IsUnique;
 import HashTables.TwoSum;
 import HashTables.ZeroMatrix;
+import LinkedLists.Node;
+import LinkedLists.RemoveDups;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
-        // hash tables examples
+        // hash tables
         System.out.println("abcde is unique ? "+IsUnique.checkCharacters("abcde"));
         System.out.println("abcded is unique ? "+IsUnique.checkCharacters("abcded"));
         System.out.println("[9,2,5,6] indices de los pares que den 7: "+ Arrays.toString(TwoSum.check(new int[]{9, 2, 5, 6}, 7)));
@@ -22,6 +24,16 @@ public class Main {
                         {9, 3, 4, 1, 9}
                 }
         );
+
+        // linked list
+        RemoveDups rmd = new RemoveDups();
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(2);
+        head.next.next.next = new Node(3);
+        head.next.next.next.next = new Node(4);
+        head.next.next.next.next.next = new Node(1);
+        rmd.execute(head);
     }
 }
 
