@@ -4,6 +4,7 @@ import HashTables.TwoSum;
 import HashTables.ZeroMatrix;
 import LinkedLists.Node;
 import LinkedLists.RemoveDups;
+import stacks_queues.ValidParenthesis;
 
 import java.util.Arrays;
 
@@ -34,6 +35,11 @@ public class Main {
         head.next.next.next.next = new Node(4);
         head.next.next.next.next.next = new Node(1);
         rmd.execute(head);
+
+        // stack y queues
+        ValidParenthesis vp = new ValidParenthesis();
+        System.out.println("([]){} is valid ? "+vp.isValid("([]){}"));
+        System.out.println("({)} is valid ? "+vp.isValid("({)}"));
     }
 }
 

@@ -13,7 +13,7 @@ public class RemoveDups {
         HashSet<Integer> values = new HashSet<Integer>();
         Node current = head;
         values.add(current.value);
-        while(current.next != null){
+        while(current != null){
             if(!values.add(current.next.value)){
                 current.next = current.next.next;
             }
